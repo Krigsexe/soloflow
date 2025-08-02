@@ -1,9 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rootDirectory": "SoloFlow-Vercel",
-  "buildCommand": "bun run build",
-  "devCommand": "bun run dev",
-  "installCommand": "bun install",
+  "buildCommand": "cd SoloFlow-Vercel && bun run build",
+  "devCommand": "cd SoloFlow-Vercel && bun run dev",
+  "installCommand": "cd SoloFlow-Vercel && bun install",
   "framework": "nextjs",
   "regions": ["fra1", "iad1"],
   "github": {
