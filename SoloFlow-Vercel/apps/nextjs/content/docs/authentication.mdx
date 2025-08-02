@@ -1,0 +1,215 @@
+---
+title: Authentification
+description: Guide complet pour configurer et utiliser l'authentification dans SoloFlow.
+published: true
+---
+
+# Authentification avec Clerk
+
+SoloFlow utilise [Clerk](https://clerk.dev) pour fournir une authentification sécurisée et moderne.
+
+## Configuration
+
+### Variables d'environnement
+
+Assurez-vous d'avoir configuré les variables suivantes dans votre fichier `.env.local` :
+
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+```
+
+### Obtenir vos clés Clerk
+
+1. Créez un compte sur [Clerk.dev](https://clerk.dev)
+2. Créez une nouvelle application
+3. Copiez vos clés depuis le dashboard Clerk
+4. Ajoutez-les à votre fichier `.env.local`
+
+## Fonctionnalités
+
+### Connexion et inscription
+
+- **Connexion par email/mot de passe**
+- **Connexion sociale** (Google, GitHub, etc.)
+- **Authentification multi-facteurs (2FA)**
+- **Récupération de mot de passe**
+
+### Gestion des utilisateurs
+
+- **Profils utilisateur complets**
+- **Gestion des sessions**
+- **Rôles et permissions**
+- **Organisations et équipes**
+
+## Utilisation dans le code
+
+### Composants d'authentification
+
+```tsx
+import { SignIn, SignUp, UserButton } from "@clerk/nextjs";
+
+// Bouton de connexion
+<SignIn />
+
+// Bouton d'inscription
+<SignUp />
+
+// Menu utilisateur
+<UserButton afterSignOutUrl="/" />
+```
+
+### Hooks utiles
+
+```tsx
+import { useUser, useAuth } from "@clerk/nextjs";
+
+function MyComponent() {
+  const { user, isLoaded } = useUser();
+  const { signOut } = useAuth();
+
+  if (!isLoaded) return <div>Chargement...</div>;
+  if (!user) return <div>Non connecté</div>;
+
+  return (
+    <div>
+      <p>Bonjour {user.firstName}!</p>
+      <button onClick={() => signOut()}>Se déconnecter</button>
+    </div>
+  );
+}
+```
+
+### Protection des routes
+
+```tsx
+import { auth } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
+
+export default function ProtectedPage() {
+  const { userId } = auth();
+
+  if (!userId) {
+    redirect("/sign-in");
+  }
+
+  return <div>Contenu protégé</div>;
+}
+```
+
+## Middleware
+
+Le middleware Clerk protège automatiquement vos routes :
+
+```typescript
+import { authMiddleware } from "@clerk/nextjs";
+
+export default authMiddleware({
+  publicRoutes: ["/", "/pricing", "/docs"],
+  ignoredRoutes: ["/api/webhook"],
+});
+
+export const config = {
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+};
+```
+
+## Personnalisation
+
+### Thème
+
+Personnalisez l'apparence des composants Clerk :
+
+```tsx
+import { ClerkProvider } from "@clerk/nextjs";
+
+const appearance = {
+  elements: {
+    formButtonPrimary: "bg-primary hover:bg-primary/90",
+    card: "shadow-lg",
+  },
+};
+
+<ClerkProvider appearance={appearance}>
+  {children}
+</ClerkProvider>
+```
+
+### Redirections
+
+Configurez les redirections après connexion/déconnexion :
+
+```tsx
+<SignIn 
+  afterSignInUrl="/dashboard"
+  afterSignUpUrl="/onboarding"
+/>
+```
+
+## Sécurité
+
+### Bonnes pratiques
+
+- ✅ Utilisez HTTPS en production
+- ✅ Configurez les domaines autorisés
+- ✅ Activez la 2FA pour les comptes administrateurs
+- ✅ Surveillez les tentatives de connexion suspectes
+- ✅ Mettez à jour régulièrement les dépendances
+
+### Webhooks
+
+Configurez des webhooks pour synchroniser les données utilisateur :
+
+```typescript
+import { Webhook } from "svix";
+
+export async function POST(req: Request) {
+  const payload = await req.text();
+  const headers = Object.fromEntries(req.headers.entries());
+
+  const webhook = new Webhook(process.env.CLERK_WEBHOOK_SECRET!);
+  const event = webhook.verify(payload, headers);
+
+  // Traiter l'événement
+  switch (event.type) {
+    case "user.created":
+      // Créer l'utilisateur dans votre base de données
+      break;
+    case "user.updated":
+      // Mettre à jour l'utilisateur
+      break;
+  }
+
+  return new Response("OK", { status: 200 });
+}
+```
+
+## Dépannage
+
+### Erreurs courantes
+
+**Erreur : "Clerk publishable key not found"**
+- Vérifiez que `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` est défini
+- Redémarrez votre serveur de développement
+
+**Erreur : "Invalid redirect URL"**
+- Vérifiez la configuration des URLs dans le dashboard Clerk
+- Assurez-vous que les URLs correspondent à votre environnement
+
+**Problème de session**
+- Videz le cache du navigateur
+- Vérifiez la configuration du middleware
+
+## Ressources
+
+- [Documentation officielle Clerk](https://clerk.dev/docs)
+- [Exemples de code](https://github.com/clerkinc/clerk-nextjs-examples)
+- [Support Clerk](https://clerk.dev/support)
+
+---
+
+*Pour plus d'informations, consultez la [documentation officielle de Clerk](https://clerk.dev/docs).*

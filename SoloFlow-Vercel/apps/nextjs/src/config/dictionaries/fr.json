@@ -1,0 +1,131 @@
+{
+  "price": {
+    "title": "Tarifs transparents et abordables !",
+    "pricing": "Tarification",
+    "slogan": "Démarrez à pleine vitesse !",
+    "monthly_bill": "Facturation Mensuelle",
+    "annual_bill": "Facturation Annuelle",
+    "annual_info": "sera facturé annuellement",
+    "monthly_info": "facturé mensuellement",
+    "mo": "/mois",
+    "contact": "pour contacter notre équipe support.",
+    "contact_2": "Vous pouvez tester les abonnements sans être facturé.",
+    "faq": "Questions Fréquemment Posées",
+    "faq_detail": "Explorez notre FAQ complète pour trouver des réponses rapides aux questions courantes. Si vous avez besoin d'aide supplémentaire, n'hésitez pas à nous contacter.",
+    "signup": "S'inscrire",
+    "upgrade": "Mettre à niveau",
+    "manage_subscription": "Gérer l'abonnement",
+    "go_to_dashboard": "Aller au tableau de bord",
+    "": ""
+  },
+  "marketing": {
+    "introducing": "Découvrez SoloFlow",
+    "title": "Automatisez votre présence digitale avec ",
+    "sub_title": "Plateforme d'automatisation de contenu IA conçue spécialement pour les solopreneurs. Générez du contenu intelligent à partir d'images et de texte.",
+    "get_started": "Commencer Gratuitement",
+    "view_on_github": "Voir sur GitHub",
+    "explore_product": "Explorer le Produit",
+    "features": "Fonctionnalités",
+    "sub_features": "IA-native : Simplification de la technologie et réduction des coûts pour les entrepreneurs.",
+    "k8s_features": "Développement rapide et simple",
+    "devops_features": "Déploiement d'application facile",
+    "price_features": "Économiquement efficace pour les environnements de production.",
+    "main_nav_features": "Fonctionnalités",
+    "main_nav_pricing": "Tarifs",
+    "main_nav_products": "Produits",
+    "main_nav_blog": "Blog",
+    "main_nav_documentation": "Documentation",
+    "login": "Connexion",
+    "signup": "S'inscrire",
+    "": "",
+    "contributors": {
+      "contributors_desc": "contributeurs ont rendu SoloFlow plus puissant",
+      "developers_first": "Aide plus de ",
+      "developers_second": " solopreneurs"
+    },
+    "right_side": {
+      "deploy_on_vercel_title": "Déployer sur Vercel",
+      "deploy_on_vercel_desc": "Commencez en quelques secondes, voyez les résultats instantanément.",
+      "ship_on_cloudflare_title": "Livrer sur Cloudflare",
+      "ship_on_cloudflare_desc": "Développez votre activité avec notre plateforme alimentée par Cloudflare.",
+      "showcase_title": "Meilleures Pratiques & Vitrine",
+      "showcase_desc": "Voyez ce que les gens construisent et discutez avec eux. Montrez vos applications au monde."
+    },
+    "features_grid": {
+      "monorepo_title": "Architecture Moderne",
+      "monorepo_desc": "Gérez plusieurs projets de manière unifiée pour faciliter le partage de code et une collaboration plus efficace.",
+      "i18n_title": "Multilingue",
+      "i18n_desc": "Support multilingue simplifié. Offrez une meilleure expérience à vos utilisateurs et développez votre activité globalement.",
+      "payments_title": "Paiements Globaux",
+      "payments_desc": "Développez votre activité globalement avec notre plateforme de paiement sécurisée, pratique et efficace.",
+      "nextauth_title": "Authentification Sécurisée",
+      "nextauth_desc": "Renforcez votre application avec une authentification sécurisée et transparente, créant une expérience de connexion sans friction."
+    },
+    "sponsor": {
+      "title": "Aimé par nos Sponsors",
+      "donate": "Offrez-nous un café, Votre Marque ici"
+    },
+    "video": {
+      "first_text": "Regardez une Vidéo, puis",
+      "second_text1": "construisez votre App en ",
+      "second_text2": "",
+      "time_text": "1 heure"
+    },
+    "people_comment": {
+      "title": "Ce que Disent les Gens",
+      "desc": "Ne nous croyez pas sur parole. Voici ce que de vraies personnes disent de SoloFlow."
+    }
+  },
+  "login": {
+    "back": "Retour",
+    "welcome_back": "Bon retour",
+    "signin_title": "Entrez votre email pour vous connecter à votre compte",
+    "singup_title": "Vous n'avez pas de compte ? Inscrivez-vous maintenant.",
+    "signin_email": "Se connecter avec Email",
+    "signin_others": "Ou continuer avec",
+    "signup": "S'inscrire",
+    "privacy": "seuls votre email et photo de profil seront stockés.",
+    "signup_github": "S'inscrire avec Github",
+    "": ""
+  },
+  "common": {
+    "copyright": "Copyright © ${currentYear} Proxitek. Tous droits réservés.",
+    "dashboard": {
+      "main_nav_documentation": "Documentation",
+      "main_nav_support": "Support",
+      "sidebar_nav_clusters": "Projets",
+      "sidebar_nav_billing": "Facturation",
+      "sidebar_nav_settings": "Paramètres",
+      "title_text": "Créer et gérer vos contenus."
+    },
+    "user_dropdown": {
+      "dashboard": "Tableau de bord",
+      "billing": "Facturation",
+      "settings": "Paramètres",
+      "logout": "Déconnexion"
+    },
+    "footer": {
+      "product": "Produit",
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "changelog": "Changelog",
+      "docs": "Documentation",
+      "company": "Entreprise",
+      "about": "À propos",
+      "blog": "Blog",
+      "careers": "Carrières",
+      "contact": "Contact",
+      "legal": "Légal",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "cookies": "Cookies"
+    }
+  },
+  "dropdown": {
+    "dashboard": "Tableau de bord",
+    "billing": "Facturation",
+    "settings": "Paramètres",
+    "sign_out": "Se déconnecter",
+    "": ""
+  }
+}

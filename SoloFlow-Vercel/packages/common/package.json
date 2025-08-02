@@ -1,0 +1,42 @@
+{
+  "name": "@soloflow/common",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./resend": "./src/email.ts",
+    "./MagicLinkEmail": "./src/emails/magic-link-email.tsx",
+    "./subscriptions": "./src/subscriptions.ts",
+    "./env": "./src/env.mjs"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check '**/*.{mjs,ts,json}' "
+  },
+  "dependencies": {
+    "@soloflow/ui": "workspace:*",
+    "resend": "2.1.0"
+  },
+  "devDependencies": {
+    "@soloflow/eslint-config": "workspace:*",
+    "@soloflow/prettier-config": "workspace:*",
+    "@soloflow/typescript-config": "workspace:*",
+    "eslint": "8.57.0",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@soloflow/eslint-config/base"
+    ]
+  },
+  "prettier": "@soloflow/prettier-config"
+}

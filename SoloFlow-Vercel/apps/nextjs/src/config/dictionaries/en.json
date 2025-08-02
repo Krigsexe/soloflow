@@ -1,0 +1,127 @@
+{
+  "price": {
+    "title": "Cheap, transparent prices!",
+    "pricing": "Pricing",
+    "slogan": "Start at full speed !",
+    "monthly_bill": "Monthly Billing",
+    "annual_bill": "Annual Billing",
+    "annual_info": "will be charged when annual",
+    "monthly_info": "when charged monthly",
+    "mo": "/mo",
+    "contact": "for to contact our support team.",
+    "contact_2": "You can test the subscriptions and won&apos;t be charged.",
+    "faq": "Frequently Asked Questions",
+    "faq_detail": "Explore our comprehensive FAQ to find quick answers to common inquiries. If you need further assistance, don&apos;t hesitate to contact us for personalized help.",
+    "signup": "Sign up",
+    "upgrade": "Upgrade",
+    "manage_subscription": "Manage Subscription",
+    "go_to_dashboard": "Go to dashboard",
+    "": ""
+  },
+  "marketing": {
+    "introducing": "Introducing SoloFlow",
+    "title": "Automate your digital presence for solopreneurs with ",
+    "sub_title": "SoloFlow is a full-stack SaaS that automates web content creation and distribution. Take a photo, add a comment, and automatically publish to your website and social media.",
+    "get_started": "Get Started",
+    "view_on_github": "View on GitHub",
+    "explore_product": "Explore Product",
+    "features": "Features",
+    "sub_features": "Intelligent solutions tailored for solopreneurs, micro-entrepreneurs, and artisans.",
+    "k8s_features": "Smart Upload",
+    "devops_features": "AI Content Generation",
+    "price_features": "Multi-Platform Publishing",
+    "main_nav_features": "Features",
+    "main_nav_pricing": "Pricing",
+    "main_nav_products": "Products",
+    "main_nav_blog": "Blog",
+    "main_nav_documentation": "Documentation",
+    "login": "Login",
+    "signup": "Sign up",
+    "": "",
+    "contributors": {
+      "contributors_desc": "contributors made SoloFlow stronger",
+      "developers_first": "Help more than ",
+      "developers_second": " solopreneurs"
+    },
+    "right_side": {
+      "deploy_on_vercel_title": "Smart Upload",
+      "deploy_on_vercel_desc": "Drag & drop or direct camera capture for easy content upload.",
+      "ship_on_cloudflare_title": "AI Content Generation",
+      "ship_on_cloudflare_desc": "Generate optimized content descriptions using GPT-4o.",
+      "showcase_title": "Multi-Platform Publishing",
+      "showcase_desc": "One-click publishing to Facebook, Instagram, LinkedIn, and Telegram."
+    },
+    "features_grid": {
+      "monorepo_title": "Smart Upload",
+      "monorepo_desc": "Support for drag & drop upload and direct camera capture. Intelligent image processing with automatic size and quality optimization.",
+      "i18n_title": "AI Content Generation",
+      "i18n_desc": "Use Google Vision API and GPT-4o to automatically generate optimized content descriptions and tags.",
+      "payments_title": "Multi-Platform Publishing",
+      "payments_desc": "Automatically publish to Facebook, Instagram, LinkedIn, Telegram, and other major social media platforms.",
+      "nextauth_title": "Modern Design",
+      "nextauth_desc": "Features Neumorphism design style, providing a modern elegant user interface and smooth user experience."
+    },
+    "sponsor": {
+      "title": "Trusted by Solopreneurs",
+      "donate": "Join the SoloFlow community and automate your brand presence"
+    },
+    "video": {
+      "first_text": "Watch the demo, then",
+      "second_text1": "automate your content publishing in ",
+      "second_text2": "",
+      "time_text": "5 minutes"
+    },
+    "people_comment": {
+      "title": "What Solopreneurs Are Saying",
+      "desc": "Don't just take our word for it. Here's what real solopreneurs are saying about SoloFlow."
+    }
+  },
+  "login": {
+    "back": "Back",
+    "welcome_back": "Welcome back",
+    "signin_title": "Enter your email to log into your account",
+    "singup_title": "Don't have an account? Sign up now.",
+    "signin_email": "Log in with Email",
+    "signin_others": "Or continue with",
+    "signup": "Sign up",
+    "privacy": "only your email and profile picture will be stored.",
+    "signup_github": "Sign Up with Github",
+    "": ""
+  },
+  "common": {
+    "copyright": "Copyright © ${currentYear} Proxitek. All rights reserved.",
+    "dashboard": {
+      "main_nav_documentation": "Documentation",
+      "main_nav_support": "Support",
+      "sidebar_nav_clusters": "Projects",
+      "sidebar_nav_billing": "Billing",
+      "sidebar_nav_settings": "Settings",
+      "title_text": "Create and manage your content."
+    },
+    "": ""
+  },
+  "business": {
+    "k8s": {
+      "new_cluster": "New Cluster",
+      "no_cluster_title": "No clusters created",
+      "no_cluster_content": "You don&apos;t have any clusters yet. Start creating cluster. ",
+      "": ""
+    },
+    "billing": {
+      "billing": "Billing",
+      "content": "Manage your subscription and billing details",
+      "noSubscription": "You are not subscribed to any plan. ",
+      "subscriptionInfo": "You are currently on the <strong>{plan}</strong> plan.Your subscription will renew on <strong>{date}</strong>.",
+      "manage_subscription": "Manage Subscription",
+      "upgrade": "upgrade",
+      "": ""
+    }
+  },
+  "dropdown": {
+    "dashboard": "Dashboard",
+    "billing": "Billing",
+    "settings": "Settings",
+    "sign_out": "Sign out",
+    "": ""
+  }
+}

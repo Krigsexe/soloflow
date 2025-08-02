@@ -1,0 +1,389 @@
+---
+title: Composants UI
+description: Guide des composants d'interface utilisateur disponibles dans SoloFlow.
+published: true
+---
+
+# Composants UI
+
+SoloFlow utilise une bibliothèque de composants basée sur [shadcn/ui](https://ui.shadcn.com/) et [Radix UI](https://www.radix-ui.com/) pour offrir une interface moderne et accessible.
+
+## Installation
+
+Les composants sont déjà configurés dans SoloFlow. Pour ajouter de nouveaux composants :
+
+```bash
+npx shadcn-ui@latest add [component-name]
+```
+
+## Composants disponibles
+
+### Boutons
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+// Variantes
+<Button variant="default">Défaut</Button>
+<Button variant="destructive">Destructeur</Button>
+<Button variant="outline">Contour</Button>
+<Button variant="secondary">Secondaire</Button>
+<Button variant="ghost">Fantôme</Button>
+<Button variant="link">Lien</Button>
+
+// Tailles
+<Button size="default">Défaut</Button>
+<Button size="sm">Petit</Button>
+<Button size="lg">Grand</Button>
+<Button size="icon">Icône</Button>
+```
+
+### Cartes
+
+```tsx
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+<Card>
+  <CardHeader>
+    <CardTitle>Titre de la carte</CardTitle>
+    <CardDescription>Description de la carte</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>Contenu de la carte</p>
+  </CardContent>
+  <CardFooter>
+    <Button>Action</Button>
+  </CardFooter>
+</Card>
+```
+
+### Formulaires
+
+```tsx
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+<div className="space-y-4">
+  <div>
+    <Label htmlFor="email">Email</Label>
+    <Input id="email" type="email" placeholder="votre@email.com" />
+  </div>
+  
+  <div>
+    <Label htmlFor="message">Message</Label>
+    <Textarea id="message" placeholder="Votre message..." />
+  </div>
+  
+  <div>
+    <Label>Catégorie</Label>
+    <Select>
+      <SelectTrigger>
+        <SelectValue placeholder="Sélectionnez une catégorie" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="general">Général</SelectItem>
+        <SelectItem value="support">Support</SelectItem>
+        <SelectItem value="billing">Facturation</SelectItem>
+      </SelectContent>
+    </Select>
+  </div>
+</div>
+```
+
+### Dialogues et modales
+
+```tsx
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+<Dialog>
+  <DialogTrigger asChild>
+    <Button>Ouvrir le dialogue</Button>
+  </DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Titre du dialogue</DialogTitle>
+      <DialogDescription>
+        Description du dialogue
+      </DialogDescription>
+    </DialogHeader>
+    <div className="py-4">
+      {/* Contenu du dialogue */}
+    </div>
+    <DialogFooter>
+      <Button variant="outline">Annuler</Button>
+      <Button>Confirmer</Button>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>
+```
+
+### Navigation
+
+```tsx
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+<NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Produits</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <div className="grid gap-3 p-6 md:w-[400px]">
+          <NavigationMenuLink href="/product1">
+            Produit 1
+          </NavigationMenuLink>
+          <NavigationMenuLink href="/product2">
+            Produit 2
+          </NavigationMenuLink>
+        </div>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+```
+
+### Tableaux
+
+```tsx
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
+<Table>
+  <TableCaption>Liste des utilisateurs</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Nom</TableHead>
+      <TableHead>Email</TableHead>
+      <TableHead>Statut</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>John Doe</TableCell>
+      <TableCell>john@example.com</TableCell>
+      <TableCell>Actif</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```
+
+### Badges et étiquettes
+
+```tsx
+import { Badge } from "@/components/ui/badge";
+
+<Badge variant="default">Défaut</Badge>
+<Badge variant="secondary">Secondaire</Badge>
+<Badge variant="destructive">Destructeur</Badge>
+<Badge variant="outline">Contour</Badge>
+```
+
+### Accordéons
+
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Question 1</AccordionTrigger>
+    <AccordionContent>
+      Réponse à la question 1
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Question 2</AccordionTrigger>
+    <AccordionContent>
+      Réponse à la question 2
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+## Thématisation
+
+### Variables CSS
+
+Les composants utilisent des variables CSS pour la thématisation :
+
+```css
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  /* ... */
+}
+```
+
+### Mode sombre
+
+Le mode sombre est automatiquement géré :
+
+```css
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  /* ... */
+}
+```
+
+### Personnalisation
+
+Pour personnaliser un composant :
+
+```tsx
+import { cn } from "@/lib/utils";
+
+<Button 
+  className={cn(
+    "bg-gradient-to-r from-purple-500 to-pink-500",
+    "hover:from-purple-600 hover:to-pink-600"
+  )}
+>
+  Bouton personnalisé
+</Button>
+```
+
+## Icônes
+
+SoloFlow utilise [Lucide React](https://lucide.dev/) pour les icônes :
+
+```tsx
+import { 
+  Home, 
+  User, 
+  Settings, 
+  ChevronDown,
+  Plus,
+  X 
+} from "lucide-react";
+
+<Button>
+  <Plus className="mr-2 h-4 w-4" />
+  Ajouter
+</Button>
+```
+
+## Animations
+
+Les composants incluent des animations fluides avec Framer Motion :
+
+```tsx
+import { motion } from "framer-motion";
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.3 }}
+>
+  <Card>Contenu animé</Card>
+</motion.div>
+```
+
+## Accessibilité
+
+Tous les composants respectent les standards d'accessibilité :
+
+- **Navigation au clavier** complète
+- **Lecteurs d'écran** supportés
+- **Contraste** conforme WCAG 2.1
+- **Focus** visible et logique
+- **ARIA** labels appropriés
+
+## Bonnes pratiques
+
+### Structure
+
+```tsx
+// ✅ Bon
+<Card>
+  <CardHeader>
+    <CardTitle>Titre</CardTitle>
+  </CardHeader>
+  <CardContent>
+    Contenu
+  </CardContent>
+</Card>
+
+// ❌ Éviter
+<div className="card">
+  <h3>Titre</h3>
+  <p>Contenu</p>
+</div>
+```
+
+### Responsive
+
+```tsx
+// ✅ Responsive
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {items.map(item => (
+    <Card key={item.id}>{/* ... */}</Card>
+  ))}
+</div>
+```
+
+### Performance
+
+```tsx
+// ✅ Lazy loading pour les composants lourds
+const HeavyComponent = lazy(() => import('./HeavyComponent'));
+
+<Suspense fallback={<div>Chargement...</div>}>
+  <HeavyComponent />
+</Suspense>
+```
+
+## Ressources
+
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
+- [Radix UI Primitives](https://www.radix-ui.com/primitives)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+---
+
+*Les composants sont régulièrement mis à jour. Consultez le changelog pour les dernières nouveautés.*

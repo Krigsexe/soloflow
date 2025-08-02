@@ -1,0 +1,135 @@
+---
+title: Dashboard
+description: Guide complet pour utiliser le tableau de bord SoloFlow
+---
+
+# Dashboard SoloFlow
+
+Bienvenue dans la documentation du tableau de bord SoloFlow. Cette page vous guide à travers toutes les fonctionnalités disponibles dans votre interface de gestion.
+
+## Vue d'ensemble
+
+Le tableau de bord SoloFlow est votre centre de contrôle principal pour gérer vos projets, analyser vos performances et optimiser votre workflow de création de contenu.
+
+### Fonctionnalités principales
+
+- **Statistiques en temps réel** : Suivez vos métriques de performance
+- **Gestion des projets** : Organisez et gérez vos contenus
+- **Analyse des données** : Visualisez vos résultats
+- **Configuration** : Personnalisez votre expérience
+
+## Navigation
+
+### Tableau de bord principal
+
+Accédez à votre tableau de bord via `/fr/dashboard` pour l'interface utilisateur ou `/admin/dashboard` pour l'interface d'administration.
+
+#### Interface utilisateur (`/fr/dashboard`)
+
+- **Cartes de statistiques** : Affichage des métriques clés
+- **Activité récente** : Historique de vos actions
+- **Utilisation des ressources** : Monitoring de votre consommation
+- **Gestion Kubernetes** : Interface de gestion des clusters
+
+#### Interface d'administration (`/admin/dashboard`)
+
+- **Métriques système** : Surveillance des performances serveur
+- **Gestion des utilisateurs** : Administration des comptes
+- **Alertes système** : Notifications importantes
+- **Monitoring avancé** : Outils de diagnostic
+
+## Composants disponibles
+
+### StatsCard
+
+Affiche les statistiques importantes avec des icônes et des couleurs personnalisées.
+
+```tsx
+<StatsCard
+  title="Projets actifs"
+  value="12"
+  icon={<Activity />}
+  trend="+15%"
+/>
+```
+
+### RecentActivity
+
+Liste les dernières actions effectuées dans votre compte.
+
+### ResourceUsage
+
+Affiche l'utilisation des ressources système avec des barres de progression.
+
+### SystemMonitoring
+
+Interface de monitoring en temps réel pour les administrateurs.
+
+## Configuration
+
+### Personnalisation
+
+Vous pouvez personnaliser votre tableau de bord en :
+
+1. Réorganisant les widgets
+2. Choisissant les métriques à afficher
+3. Configurant les alertes
+4. Définissant vos préférences d'affichage
+
+### Permissions
+
+Les fonctionnalités disponibles dépendent de votre rôle :
+
+- **Utilisateur** : Accès au dashboard personnel
+- **Administrateur** : Accès complet aux outils d'administration
+- **Modérateur** : Accès limité aux fonctions de modération
+
+## Raccourcis clavier
+
+| Raccourci | Action |
+|-----------|--------|
+| `Ctrl + D` | Accéder au dashboard |
+| `Ctrl + S` | Sauvegarder les modifications |
+| `Ctrl + R` | Actualiser les données |
+| `Esc` | Fermer les modales |
+
+## Dépannage
+
+### Problèmes courants
+
+#### Le dashboard ne se charge pas
+
+1. Vérifiez votre connexion internet
+2. Actualisez la page (F5)
+3. Videz le cache du navigateur
+4. Contactez le support si le problème persiste
+
+#### Données manquantes
+
+1. Vérifiez vos permissions
+2. Assurez-vous que les services sont actifs
+3. Consultez les logs d'erreur
+
+#### Performance lente
+
+1. Fermez les onglets inutiles
+2. Réduisez le nombre de widgets affichés
+3. Vérifiez la charge système
+
+## Support
+
+Pour obtenir de l'aide :
+
+- Consultez notre [FAQ](/docs/faq)
+- Contactez notre équipe de support
+- Rejoignez notre communauté Discord
+
+## Ressources
+
+- [Guide de démarrage rapide](/docs/getting-started)
+- [API Documentation](/docs/api)
+- [Exemples de code](https://github.com/soloflow/examples)
+
+---
+
+*Dernière mise à jour : Janvier 2025*

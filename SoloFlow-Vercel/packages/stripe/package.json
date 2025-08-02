@@ -1,0 +1,43 @@
+{
+  "name": "@soloflow/stripe",
+  "private": true,
+  "version": "0.1.0",
+  "exports": {
+    ".": "./src/index.ts",
+    "./plans": "./src/plans.ts",
+    "./env": "./src/env.mjs"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "dev": "echo 'Stripe disabled'",
+    "lint": "eslint .",
+    "format": "prettier --check '**/*.{mjs,ts,json}' ",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@soloflow/db": "workspace:*",
+    "@t3-oss/env-nextjs": "0.8.0",
+    "stripe": "^18.3.0"
+  },
+  "devDependencies": {
+    "@soloflow/eslint-config": "workspace:*",
+    "@soloflow/prettier-config": "workspace:*",
+    "@soloflow/typescript-config": "workspace:*",
+    "eslint": "8.57.0",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@soloflow/eslint-config/base"
+    ]
+  },
+  "prettier": "@soloflow/prettier-config"
+}
