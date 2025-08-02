@@ -1,4 +1,4 @@
-import { GoogleAuthCallback } from "@/components/auth/google-auth-button";
+import { GoogleAuthCallback } from "~/components/auth/google-auth-button";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

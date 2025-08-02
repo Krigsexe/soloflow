@@ -37,6 +37,7 @@
   "packageManager": "bun@1.1.10",
   "dependencies": {
     "@clerk/nextjs": "^6.27.1",
+    "@supabase/ssr": "^0.6.1",
     "caniuse-lite": "^1.0.30001731",
     "stripe": "^18.3.0"
   },
