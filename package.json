@@ -1,0 +1,10 @@
+{
+  "name": "soloflow-root",
+  "private": true,
+  "scripts": {
+    "build": "cd SoloFlow-Vercel && bun run build",
+    "dev": "cd SoloFlow-Vercel && bun run dev",
+    "install": "cd SoloFlow-Vercel && bun install"
+  },
+  "packageManager": "bun@1.1.10"
+}
